@@ -9,15 +9,13 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: [
-      "https://himashabuilders.com/",
-      "https://www.himashabuilders.com",
-      "http://localhost:5173",
-    ],
-    methods: ["GET", "POST"],
+    origin: "https://himashabuilders.com",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
-  }),
+  })
 );
+
+
 app.use(express.json());
 
 // Test Route
